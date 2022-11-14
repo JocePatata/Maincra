@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+ {% block content %} 
+
+ <section class="section-class">
+    <section class="articles">
+        <article>
+            <h2>Admins Pendientes</h2>
+        </article>
+        <article>
+
+            <div class="container"> 
+                <br> 
+                <center><h1><strong>Proximos admins?</strong></h1></center> 
+                <center><table width="80%" border="0" cellpadding="2%"></table></center> 
+                <tr> 
+                    <td> 
+                        <table class="table"> 
+                            <thead> <tr> <th class="table-dark" scope="col">Solicitudes</th>
+
+                                <th class="table-dark" scope="col"><center>Autorizadas</center></th>
+
+                                <td class="table-dark"></td> <td class="table-dark"><center>
+                                    </center></td> 
+
+                                </tr> </thead> 
+                                <tbody> <table class="table table-striped table-danger">
+                                    {% for i in req %} 
+                                    <tr> 
+                                       <td width="65%">
+                                           {{i.1}}
+                                
+                                       {% for i in pue %} 
+                                 
+                                       <td width="45%">
+                                           {{i.1}}
+                                       </td> 
+                                       {% endfor %} 
+                                        <td width="15%"><center>
+                                            <a class="btn btn-danger" href="/requisicion_fdetalle/{{i.0}}" role="button">Detalle</a>
+                                        </center></td> <td width="15%"><center>
+                                            <a class="btn btn-danger" href="/requisicion_autorizar/{{i.0}}" role="button">Autorizar</a></center></td>
+                                             <td width="15%"><center>
+                                                <a class="btn btn-outline-danger" href="/requisicion_borrar/{{i.0}}" role="button">Borrar</a></center></td> 
+                                </tr>  {% endfor %} 
+                            </table> 
+                        </tbody> 
+                    </table>
+        <h3> 
+            <br>
+<h3><CENTER> <b> Detalle: </b> </CENTER></h3>
+<br> 
+<form class="row g-3" action="/requisicion_fdetalle/" method="GET"> 
+<div class="col-md-12"> 
+    <label for="nombre" class="form-label">Nombre:</label> 
+    <input type="text" class="form-control" name="nombre" id="nombre" value="{{dat.1}}" readonly="readonly"></input> 
+</div>
+<br> 
+<div class="col-md-6"> 
+    <label for="idServidor" class="form-label">Servidor:</label> 
+    <input type="text" class="form-control" name="idServidor" id="idServidor" value="{{catServidor.1}}" readonly="readonly"></input> 
+</div> 
+<div class="col-md-6"> 
+    <label for="conducta" class="form-label">Buena Conducta?</label> 
+    <input type="text" class="form-control" name="conducta" id="conducta" value="{{dat.2}}" readonly="readonly"></input> 
+</div> 
+<div class="col-md-12"> 
+    <label for="nombre" class="form-label">Puesto:</label> 
+    <input type="text" class="form-control" name="nombre" id="idPuesto" value="{{catPuesto.1}}" readonly="readonly"></input> 
+</div> 
+    <div class="col-md-8"> 
+        <label for="reglas" class="form-label">Reglas:</label> 
+    <input type="text" class="form-control" name="reglas" id="reglas" value="{{dat.3}}" readonly="readonly"></input> 
+</div> 
+
+
+</div> 
+</form> 
+</div> 
+</article>
+</section>
+</body>
+</div>
+{% endblock %}
+

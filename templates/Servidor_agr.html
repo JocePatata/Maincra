@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="section-class">
+   <section class="articles">
+       <article>
+           <h2>Servidores</h2>
+       </article>
+       <article>
+<h3>
+    <br>
+    <Center> <b> Agregar Servidor </b> </Center>
+
+</h3>
+   <br>
+   <br>
+<form action="/servidor_fagrega" method="post">
+   <div class="container">
+          <div class="form-row">
+
+
+               <div class="col-xs-12 ">
+                <div class="mb-3">
+                      <label for="descripcion" class="form-label"><strong> Nombre:</strong></label>
+                      <input type="text" class="form-control" name="descripcion" id="descripcion"required></input>
+                </div>
+                </div>
+
+                <div class="col-xs-12 ">
+                    <div class="mb-3">
+                          <label for="DireccionIP" class="form-label"><strong> Dirección IP:</strong></label>
+                          <input type="text" class="form-control" name="DireccionIP" id="DireccionIP"required></input>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 ">
+                    <div class="mb-3">
+                            <label for="MaxPersonas" class="form-label"><strong> Máximo personas:</strong></label>
+                            <input type="text" class="form-control" name="MaxPersonas" id="MaxPersonas"required></input>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 ">
+                    <div class="mb-3">
+                            <label for="ubicacion" class="form-label"><strong> Ubicacion del Servidor:</strong></label>
+                            <input type="text" class="form-control" name="ubicacion" id="ubicacion"required></input>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 ">
+                    <div class="mb-3">
+                          <label for="antiguedad" class="form-label"><strong> Antiguedad:</strong></label>
+                          <input type="date" class="form-control" name="antiguedad" id="antiguedad"required></input>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 ">
+                    <div class="mb-3">
+                            <label for="Nointegrantes" class="form-label"><strong> Número de integrantes:</strong></label>
+                            <input type="text" class="form-control" name="Nointegrantes" id="Nointegrantes"required></input>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 ">
+                    <div class="mb-3">
+                          <label for="nomPropietario" class="form-label"><strong> Propietario:</strong></label>
+                          <input type="text" class="form-control" name="nomPropietario" id="nomPropietario"required></input>
+                    </div>
+                </div>
+
+          </div>
+
+
+          <br>
+       <center><button type="submit" class="btn btn-info">Enviar</button></center>
+       <br>
+    </div>
+
+</form>
+</article>
+</section>
+{% endblock %}

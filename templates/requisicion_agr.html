@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+{% block content %} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <section class="section-class">
+    <section class="articles">
+        <article>
+<div class="container"> 
+    <h3> <CENTER> <b> Solicitud para admin: </b> </CENTER> </h3> 
+    <br> 
+    <center><div class="col-md-8"></div></center> 
+    <form class="row g-3" action="/requisicion_fagrega" method="post"> 
+
+
+        <div class="col-md-12"> <label for="nombre" class="form-label">Nombre:</label> 
+            <input type="text" class="form-control" name="nombre" id="nombre" required></input> 
+        </div> 
+
+        <div class="col-md-3"> <label for="idServidor" class="form-label">Servidor: </label> 
+            <select name="idServidor" id="idServidor" class = "form-select" > 
+                <option selected>Elige...</option>
+                {% for i in catServidor %} 
+                <option value="{{i.0}}">{{i.1}}</option> 
+                {% endfor %} 
+            </select> 
+        </div> 
+
+        <div class="col-md-3"> 
+            <label for="idPuesto" class="form-label">Puesto a cubrir:</label> 
+            <select name="idPuesto" id="idPuesto" class = "form-select" > 
+                <option selected>Elige...</option>
+                {% for i in catPuesto %} 
+                <option value="{{i.0}}">{{i.1}}</option> 
+                {% endfor %} 
+            </select> 
+        </div> 
+
+
+
+    <div class="col-md-3"> 
+        <label for="reglas" class="form-label">Acepta las reglas?</label> <a href="/reglas">Reglas</a>
+        <select name="reglas" id="reglas" class = "form-select"> 
+            <option value="Indistinto" selected>Elige...</option>
+            <option value="Sí">Sí</option> 
+            <option value="No">No</option> 
+
+      
+
+ 
+        </select> 
+
+
+    </div>
+
+
+    
+
+    <div class="col-md-3"> 
+        <label for="conducta" class="form-label">¿Buena Conducta?</label> 
+        <select name="conducta" id="conducta" class = "form-select"> 
+            <option value="Indistinto" selected>Elige...</option>
+            <option value="Sí">Sí</option> 
+            <option value="No">No</option> 
+            <option value="Indistinto">Indistinto</option> 
+        </select> 
+    </div>
+
+
+<div class="col-12"> 
+    <br>
+    <center><button type="submit" class="btn btn-danger">Enviar</button></center> 
+</div> 
+</form> 
+</div>
+</div>
+</article>
+</section>
+</body>
+</div>
+
+
+{% endblock %}

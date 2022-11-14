@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block content %} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <section class="section-class">
+    <section class="articles">
+        <article>
+            <h2</h2>
+        </article>
+        <article>
+<div class="container"> 
+    <h3> <CENTER> <b> Agregar Puesto </b> </CENTER> </h3> 
+    <br> 
+    <center><div class="col-md-8"></div></center> 
+    <form class="row g-3" action="/requisicion_autorizar/" method="post"> 
+
+    <div class="col-md-12"> 
+        <label for="idCuenta" class="form-label">id Cuenta:</label> 
+        <input type="text" class="form-control" name="idCuenta" id="idCuenta" value="{{catCuenta.1}}" readonly="readonly"></input> 
+    </div>
+
+    <div class="col-md-12"> 
+        <label for="nombre" class="form-label">nombre:</label> 
+        <input type="text" class="form-control" name="nombre" id="nombre" value="{{dat.1}}" readonly="readonly"></input> 
+    </div> 
+    </form>
+    
+    <form class="row g-3" action="/requisicion_fautorizar/{{dat.0}}" method="post"> 
+
+        <div class="col-md-12"> 
+            <label for="nomAutoriza" class="form-label">Autorizado por:</label> 
+            <input type="text" class="form-control" name="nomAutoriza" id="nomAutoriza" required>
+        </input> 
+        </div> 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="col-12"> 
+        <br> 
+        <center><button type="submit" class="btn btn-danger">Enviar</button> </center>
+    </div> 
+</form>
+</article>
+</section>
+</body>
+</div>
+
+
+{% endblock %}

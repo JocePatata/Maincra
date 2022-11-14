@@ -1,0 +1,178 @@
+
+#header {
+    background: #0b4e68;
+    overflow: hidden;
+  
+}
+
+ul, ol {
+    padding-top: 37px;
+    list-style:none;
+    padding-bottom: 15px;
+}
+
+.nav > li {
+    width: 45%;
+    float: left;
+    box-shadow: 0 0 10px 0 #5e5e5e inset, 0 0 10px 4px #11b9ab;
+    margin: 10px;
+}
+
+.nav li a {
+    padding: 10px 20px;
+    display:block;
+    color:#fff ;
+    text-decoration: none;
+    box-shadow: 0 0 40px 40px #0b689e inset, 0 0 0 0 #2d4d63;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+.nav li a:hover {
+    background: #B1B2C2 ;
+}
+
+.nav li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+
+.nav li:hover > ul {
+    display:block;
+    padding: 2px;
+}
+
+.nav li ul li {
+    position:relative;
+}
+
+.nav li ul li ul {
+    right:-140px;
+    top:0px;
+}
+.navbar-brand{
+    width: 80px;
+    float: left;
+    margin: 10px;
+}
+img index{
+    width: 400;
+    height: 300;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(/static/Imag/p.jpg);
+    
+}
+
+header, .main, footer{
+    width: 90%;
+    margin: 1% auto;
+   
+}
+
+header nav {
+    background: #569727;
+    overflow: hidden;
+    margin: 10px;
+}
+
+header nav ul {
+    list-style: none;
+
+}
+header nav ul li{
+    float: left;
+    box-shadow: 0 0 10px 0 #165e2e inset, 0 0 10px 4px #7bd170;
+    margin: 10px;
+}
+header nav ul li a{
+    padding: 10px 20px;
+    display:block;
+}
+
+
+
+.main .articles{
+    width:68.5%;
+    margin-right: 1.5%;
+    float:left;
+    
+}
+.main .articles article{
+    padding: 20px;
+    border-radius: 20px;
+    color: aliceblue;
+    margin-bottom: 20px;
+    background: linear-gradient(#000000, rgb(22, 22, 22));
+}
+.section-class .articles{
+    width: 90%;
+    margin-left: 5%;
+    float: center;
+}
+
+.section-class .articles article {
+    padding: 20px;
+    border-radius: 20px;
+    color: aliceblue;
+    margin-bottom: 20px;
+    background: linear-gradient(#053453, rgb(6, 43, 90));
+}
+aside{
+    width: 30%;
+  
+    border-radius: 20px;
+    color: aliceblue;
+    float: left;
+    padding: 20px;
+    box-sizing:border-box;
+    text-align: auto;
+    background: linear-gradient(#000000, rgb(22, 22, 22));
+}
+footer{
+    background: #010715;
+    margin-bottom: 0px;
+    color: rgb(170, 170, 170);
+    clear: both;
+    text-align: center;
+    background: #000000;
+    float: left;
+    width: 100%;
+    float: center;
+}
+
+.main article{
+    background: #B1B2AB ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

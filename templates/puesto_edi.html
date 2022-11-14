@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+ {% block content %} 
+
+ <section class="section-class">
+    <section class="articles">
+     
+        <article>
+   <div class="container">
+
+<h3>
+   <CENTER> <b> Editar Puesto </b> </CENTER>
+
+</h3>
+
+  <br>
+<form class="row g-3"  action="/puesto_fedita/{{dat.0}}" method="post">
+
+
+    <div class="col-md-6"> <label for="nombre" class="form-label">Nombre puesto:</label> 
+        <input type="text" class="form-control" name="nombre" id="nombre" required></input> 
+    </div> 
+  
+    <div class="col-md-6"> <label for="apellidos" class="form-label">Nombre y Apellidos:</label> 
+        <input type="text" class="form-control" name="apellidos" id="apellidos" required></input> 
+    </div> 
+    <div class="col-md-12"> <label for="idServidor" class="form-label">Nombre del Servidor:</label> 
+        <select name="idServidor" id="idServidor" class = "form-select" > 
+            <option selected>Elige...</option>
+            {% for i in catServidor %} 
+            <option value="{{i.0}}">{{i.1}}</option> 
+            {% endfor %} 
+        </select> 
+    </div> 
+    <div class="col-md-4"> 
+        <label for="edad" class="form-label">Edad:</label> 
+        <input type="text" class="form-control" name="edad" id="edad" required>
+    </input> 
+</div> 
+<div class="col-md-8"> 
+    <label for="correo" class="form-label">Correo:</label> 
+    <input type="text" class="form-control" name="correo" id="correo" required>
+</input> 
+</div> 
+<div class="col-md-3"> 
+<label for="idCuenta" class="form-label">id Cuenta:</label> 
+<input type="text" class="form-control" name="idCuenta" id="idCuenta" required>
+</input> 
+</div> 
+<div class="col-md-3"> 
+<label for="idiomas" class="form-label">Idiomas:</label> 
+<input type="text" class="form-control" name="idiomas" id="idiomas" required>
+</input> 
+</div> 
+<div class="col-md-3"> <label for="habilidades" class="form-label">Habilidades:</label> 
+<input type="text" class="form-control" name="habilidades" id="habilidades" required>
+</input> </div> 
+
+<div class="col-md-3"> 
+<label for="servidoresAntes" class="form-label">¿Has estado en servidores antes?</label> 
+<select name="servidoresAntes" id="servidoresAntes" class = "form-select"> 
+    <option value="Indistinto" selected>Elige...</option>
+    <option value="Sí">Sí</option> 
+    <option value="No">No</option> 
+ 
+</select> 
+</div>
+
+
+
+   <div class="col-md-12">
+    <br>
+          <center><button type="submit" class="btn btn-danger">Enviar</button></center>
+    </div>
+</form>
+
+
+</article>
+</section>
+</body>
+</div>
+{% endblock %}
